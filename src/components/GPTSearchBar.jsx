@@ -11,7 +11,7 @@ const GPTSearchBar = () => {
 
   const inputRef = useRef(null);
 
-  const [allSearchedData, setAllData] = useState(null);
+  const [setAllData] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleGptSearch = async () => {
