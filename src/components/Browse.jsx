@@ -8,31 +8,32 @@ import { useSelector } from "react-redux";
 import GPTSearch from "./GPTSearch";
 
 const Browse = () => {
-
-
   useNowPlayingMovies();
   useTrendingMovies();
 
-  const gptData = useSelector(store=>store.gpt);
-  const showTogData = gptData.IsGptSlice
-  // console.log(gptData.IsGptSlice);
-
+  const showTogData = useSelector((store) => store.gpt.IsGptSlice);
 
   return (
-    <div>
+    <div className="min-h-screen bg-black overflow-x-hidden">
+      <Header />
 
-<Header />
+      <main className="w-full overflow-x-hidden">
+        {showTogData ? (
+          <section className="min-h-screen pt-24">
+            <GPTSearch />
+          </section>
+        ) : (
+          <>
+            <section className="w-full">
+              <MainContainer />
+            </section>
 
-   {
-
-showTogData ? <GPTSearch /> :  ( <div>  <MainContainer />
-     <SecondaryContainer /></div>)
-
-   }  
-   
-     
-    
-
+            <section className="w-full px-0 md:px-4 pb-10">
+              <SecondaryContainer />
+            </section>
+          </>
+        )}
+      </main>
     </div>
   );
 };
