@@ -4,7 +4,7 @@ A modern **AI-powered movie discovery and recommendation web application** built
 
 ## 🚀 Live Demo
 
-**Live Application:** Add your Vercel deployment URL here
+🔗 **[Visit Movie Guide App](https://movie-guide-app-8jy5.vercel.app/browse)**
 
 ## 🔑 Test Credentials
 
@@ -19,21 +19,15 @@ These credentials are provided for demo and testing purposes.
 
 ### Home / Browse
 
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots/HomePage.png)
 
 ### Login
 
-![Login Page](./screenshots/login.png)
+![Login Page](./screenshots/SignIn.png)
 
 ### AI Movie Search
 
-![AI Search](./screenshots/gpt-search.png)
-
-### Movie Recommendations
-
-![Movie Recommendations](./screenshots/recommendations.png)
-
-> Replace the screenshot paths with the actual images in your repository.
+![AI Search](./screenshots/Movie-Recommendation.png)
 
 ---
 
@@ -243,18 +237,6 @@ The application uses TMDB for:
 
 ---
 
-## 🌍 Language Support
-
-The application supports multiple languages for the AI search interface.
-
-Language preferences are stored in Redux and dynamically update:
-
-- Search placeholder
-- Search button text
-- Other supported UI text
-
----
-
 ## ⚙️ Installation
 
 ### 1. Clone the repository
@@ -298,10 +280,6 @@ Example:
 ```env
 REACT_APP_TMDB_API_KEY=your_tmdb_api_key
 ```
-
-Do not commit sensitive API keys or credentials to GitHub.
-
-If the project uses Firebase, configure your Firebase project inside the Firebase configuration file according to your environment.
 
 ---
 
