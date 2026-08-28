@@ -4,23 +4,38 @@ import { addTrendingMovies } from "../utils/moviesSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const useTrendingMovies = () => {
-  const selectr = useSelector((store) => store.movies.nowTrending);
+  const trendingMovies = useSelector((store) => store.movies.nowTrending);
 
   const dispatch = useDispatch();
 
-  const getTrendingMovies = async () => {
-    const data1 = await fetch(
-      "https://api.themoviedb.org/3/movie/popular?page=1",
-      API_OPTIONS,
-    );
-    const json1 = await data1.json();
-    console.log(json1);
-    dispatch(addTrendingMovies(json1.results));
-  };
-
   useEffect(() => {
-    !selectr && getTrendingMovies();
-  }, [selectr]);
+    if (trendingMovies) return;
+
+    const getTrendingMovies = async () => {
+      try {
+        const response = await fetch(
+          "https://api.themoviedb.org/3/movie/popular?page=1",
+          API_OPTIONS,
+        );
+
+        if (!response.ok) {
+          throw new Error(
+            `Failed to fetch trending movies: ${response.status}`,
+          );
+        }
+
+        const json = await response.json();
+
+        console.log("Trending Movies:", json);
+
+        dispatch(addTrendingMovies(json.results));
+      } catch (error) {
+        console.error("Error fetching trending movies:", error);
+      }
+    };
+
+    getTrendingMovies();
+  }, [trendingMovies, dispatch]);
 };
 
 export default useTrendingMovies;
