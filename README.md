@@ -1,70 +1,417 @@
-# Getting Started with Create React App
+# 🎬 Movie Guide App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern **AI-powered movie discovery and recommendation web application** built with React. Users can explore movies, search for personalized recommendations using AI, and securely authenticate using Firebase.
 
-## Available Scripts
+## 🚀 Live Demo
 
-In the project directory, you can run:
+**Live Application:** Add your Vercel deployment URL here
 
-### `npm start`
+## 🔑 Test Credentials
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Use the following credentials to access the application:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Email: test@example.com
+Password: Test@123456
 
-### `npm test`
+These credentials are provided for demo and testing purposes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📸 Screenshots
 
-### `npm run build`
+### Home / Browse
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Home Page](./screenshots/home.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Login
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Login Page](./screenshots/login.png)
 
-### `npm run eject`
+### AI Movie Search
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![AI Search](./screenshots/gpt-search.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Movie Recommendations
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Movie Recommendations](./screenshots/recommendations.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Replace the screenshot paths with the actual images in your repository.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ✨ Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 🔐 **Firebase Authentication**
+  - User registration
+  - Email/password login
+  - Logout
+  - Authentication state persistence
 
-### Code Splitting
+- 🎬 **Movie Discovery**
+  - Now Playing movies
+  - Popular / Trending movies
+  - Movie posters and descriptions
+  - Movie trailers using TMDB video API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 🤖 **AI Movie Recommendations**
+  - Enter natural-language movie preferences
+  - AI generates personalized movie recommendations
+  - Automatically searches recommended movies using TMDB
 
-### Analyzing the Bundle Size
+- 🌍 **Multi-language Support**
+  - Search interface available in multiple languages
+  - Language preference managed through Redux
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- 🔎 **Movie Search**
+  - Search movies based on user preferences
+  - Dynamic movie results
 
-### Making a Progressive Web App
+- 📱 **Responsive UI**
+  - Mobile-friendly design
+  - Tablet and desktop layouts
+  - Responsive movie grids and navigation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- ⚡ **State Management**
+  - Redux Toolkit
+  - Centralized movie, user, GPT, and configuration state
 
-### Advanced Configuration
+- ☁️ **Deployment**
+  - Production deployment with Vercel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🛠️ Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Frontend
 
-### `npm run build` fails to minify
+- React 18
+- React Router
+- Tailwind CSS
+- JavaScript (ES6+)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### State Management
+
+- Redux
+- Redux Toolkit
+- React Redux
+
+### APIs & Services
+
+- TMDB API
+- Firebase Authentication
+- Puter AI
+
+### Build & Deployment
+
+- Create React App
+- Vercel
+- Git & GitHub
+
+---
+
+## 🏗️ Application Architecture
+
+```text
+Movie Guide App
+│
+├── Authentication
+│   ├── Login
+│   ├── Signup
+│   └── Firebase Authentication
+│
+├── Browse
+│   ├── Main Container
+│   ├── Movie Lists
+│   ├── Now Playing
+│   ├── Popular Movies
+│   └── Movie Trailers
+│
+├── AI Movie Search
+│   ├── User Prompt
+│   ├── AI Recommendation
+│   ├── Movie Name Extraction
+│   └── TMDB Search
+│
+└── State Management
+    ├── User Slice
+    ├── Movies Slice
+    ├── GPT Slice
+    └── Configuration Slice
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+│
+├── components/
+│   ├── Browse.jsx
+│   ├── Header.jsx
+│   ├── Login.jsx
+│   ├── GPTSearch.jsx
+│   ├── GPTSearchBar.jsx
+│   ├── GPTMovieSuggestions.jsx
+│   ├── MainContainer.jsx
+│   └── SecondaryContainer.jsx
+│
+├── hooks/
+│   ├── useGetKey.jsx
+│   ├── useNowPlayingMovies.jsx
+│   └── useTrendingMovies.jsx
+│
+├── utils/
+│   ├── Firebase.js
+│   ├── Constants.js
+│   ├── Validate.jsx
+│   ├── moviesSlice.js
+│   ├── userSlice.js
+│   ├── gptSlice.js
+│   └── configSlice.js
+│
+└── App.js
+```
+
+---
+
+## 🔐 Authentication
+
+Firebase Authentication is used for secure user authentication.
+
+The application supports:
+
+```text
+Signup
+   ↓
+Firebase Authentication
+   ↓
+Login
+   ↓
+Authentication State
+   ↓
+Browse Page
+```
+
+Firebase's `onAuthStateChanged` listener keeps the application synchronized with the user's authentication state.
+
+---
+
+## 🤖 AI Recommendation Flow
+
+The AI movie recommendation system works in the following way:
+
+```text
+User enters movie preference
+          ↓
+       AI Search
+          ↓
+AI generates movie names
+          ↓
+Parse movie names
+          ↓
+Remove duplicates
+          ↓
+Search TMDB API
+          ↓
+Movie Results
+          ↓
+Display Recommendations
+```
+
+Example:
+
+```text
+"Recommend some action movies with time travel"
+```
+
+The AI generates movie names, which are then searched through TMDB to retrieve posters, descriptions, release dates, and other movie information.
+
+---
+
+## 🎥 Movie Data
+
+Movie information is retrieved from **The Movie Database (TMDB)** API.
+
+The application uses TMDB for:
+
+- Movie search
+- Popular movies
+- Now playing movies
+- Movie posters
+- Movie descriptions
+- Release dates
+- Movie videos/trailers
+
+---
+
+## 🌍 Language Support
+
+The application supports multiple languages for the AI search interface.
+
+Language preferences are stored in Redux and dynamically update:
+
+- Search placeholder
+- Search button text
+- Other supported UI text
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Musaib-Naseem/Movie-Guide-App.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd Movie-Guide-App
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm start
+```
+
+The application will run at:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root.
+
+Example:
+
+```env
+REACT_APP_TMDB_API_KEY=your_tmdb_api_key
+```
+
+Do not commit sensitive API keys or credentials to GitHub.
+
+If the project uses Firebase, configure your Firebase project inside the Firebase configuration file according to your environment.
+
+---
+
+## 🏗️ Production Build
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+The production files will be generated in:
+
+```text
+build/
+```
+
+---
+
+## 🚀 Deployment
+
+The application can be deployed using Vercel.
+
+Typical deployment flow:
+
+```text
+Local Development
+       ↓
+Git Commit
+       ↓
+Git Push
+       ↓
+GitHub
+       ↓
+Vercel
+       ↓
+Production
+```
+
+Every push to the configured GitHub branch can trigger a new Vercel deployment.
+
+---
+
+## 🧠 Key React Concepts Used
+
+This project demonstrates practical usage of:
+
+- Functional Components
+- React Hooks
+- `useState`
+- `useEffect`
+- `useRef`
+- Custom Hooks
+- React Router
+- Redux Toolkit
+- Redux Selectors
+- Protected authentication flow
+- API integration
+- Async/Await
+- Promise handling
+- Conditional rendering
+- Responsive UI
+- Component-based architecture
+
+---
+
+## 🔒 Security Considerations
+
+- Firebase handles authentication securely.
+- API credentials should be stored using environment variables where appropriate.
+- Sensitive credentials should never be committed to GitHub.
+- Authentication state is managed through Firebase's authentication listener.
+
+---
+
+## 📈 Future Improvements
+
+Potential improvements include:
+
+- ⭐ Add movie ratings
+- ❤️ Add favorites / watchlist
+- 🔍 Advanced movie filtering
+- 🎭 Genre-based recommendations
+- 👤 User profile management
+- 📱 Progressive Web App support
+- 🎞️ Movie details page
+- 🧪 Unit and integration testing
+- ⚡ Further performance optimization
+- 🌙 Dark/light theme support
+
+---
+
+## 👨‍💻 Author
+
+**Musaib Naseem**
+
+Frontend Developer focused on building modern, scalable React applications.
+
+### Technologies
+
+`React` `JavaScript` `Redux Toolkit` `Tailwind CSS` `Firebase` `REST APIs` `AI` `Git` `GitHub`
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub.
+
+---
+
+## 📄 License
+
+This project is created for learning and portfolio purposes.
