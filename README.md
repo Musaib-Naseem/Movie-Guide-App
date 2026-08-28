@@ -6,14 +6,16 @@ A modern **AI-powered movie discovery and recommendation web application** built
 
 🔗 **[Visit Movie Guide App](https://movie-guide-app-8jy5.vercel.app/browse)**
 
-## 🔑 Test Credentials
+## 🔑 Demo Credentials
 
-Use the following credentials to access the application:
+Use the credentials below to explore the application:
 
-Email: test@example.com
-Password: Test@123456
+| Field           | Credentials        |
+| --------------- | ------------------ |
+| 📧 **Email**    | `test@example.com` |
+| 🔒 **Password** | `Test@123456`      |
 
-These credentials are provided for demo and testing purposes.
+> **Note:** These credentials are provided exclusively for demo and testing purposes.
 
 ## 📸 Screenshots
 
@@ -389,7 +391,3 @@ Frontend Developer focused on building modern, scalable React applications.
 If you find this project useful, consider giving the repository a ⭐ on GitHub.
 
 ---
-
-## 📄 License
-
-This project is created for learning and portfolio purposes.
